@@ -26,13 +26,19 @@ while True:
         break
 
 # Create a function find_factorial(n) that calculates the factorial of a given number n using a while loop. The function should handle cases where n is less than 0 by raising a ValueError.
-num=int(input("Enter number: "))
-factorial_number=1
-c=1
-while c<=num:
-    factorial_number*=c
-    c+=1
-print(factorial_number)
+num = int(input("Enter a number: "))
+
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    factorial = 1
+    i = 1
+
+    while i <= num:
+        factorial *= i
+        i += 1
+
+    print("Factorial =", factorial)
 # Develop a simple number guessing game where the computer thinks of a number between 1 and 100, and the user has to guess it. After each guess, the computer should give a hint (higher or lower) using a while loop to repeatedly ask for guesses until the correct number is guessed
 import random as rd
 num=rd.randint(1,100)
